@@ -4,18 +4,18 @@ Esse projeto tem a finalidade de ser exemplo para criação de um novo projeto.
 
 Tecnologias utilizadas.
 
-Java 23
-Spring data
-Spring security
-Spring feing
-Spring web
-Spring Cloud (openFeing)
-Auth0
-JWT
-Migrations FYWAYDB
-Mapstruct
-Swagger
-Banco h2
+* Java 23
+* Spring data
+* Spring security
+* Spring feing
+* Spring web
+* Spring Cloud (openFeing)
+* Auth0
+* JWT
+* Migrations FYWAYDB
+* Mapstruct
+* Swagger
+* Banco h2
 
 Para executar a aplicação e preciso startar a classe Application.java dentro do modulo interface.
 Após subir o sistema.
