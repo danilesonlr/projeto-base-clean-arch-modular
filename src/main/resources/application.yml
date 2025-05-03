@@ -1,0 +1,31 @@
+spring:
+  application:
+  name: projeto-base-clean-arch-modular
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    baseline-on-migrate: true
+    username: sa
+    password:
+    h2:
+      console:
+        enabled: true
+    jpa:
+      hibernate:
+        ddl-auto: update
+      jpa:
+        show-sql: true
+        properties:
+          hibernate:
+            format_sql: true
+            ddl-auto: none
+            show_sql: true
+            use_sql_comments: true
+            generate_statistics: true
+  flyway:
+    enabled: true
+    locations: classpath:migrations
+
+api:
+  securiy:
+    token: ${JWT_SECRET:17823648fds}

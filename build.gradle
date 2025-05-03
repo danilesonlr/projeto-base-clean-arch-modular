@@ -1,0 +1,80 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.5'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'br.com.projeto.base'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(23)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('springCloudVersion', "2024.0.1")
+}
+
+dependencies {
+
+	/*IMPLEMENTACAO SPRING JPA*/
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	/*IMPLEMENTACAO H2*/
+	runtimeOnly 'com.h2database:h2'
+
+	/*IMPLEMENTACAO TESTE*/
+	testImplementation platform('org.junit:junit-bom:5.10.0')
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+
+	/*IMPLEMENTACAO LOMBOK*/
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	/*IMPLEMENTACAO MAPSTRUCT*/
+	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
+	/*IMPLEMENTACAO FEING*/
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+	/*IMPLEMENTACAO SPRING SECURITY*/
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+	/*IMPLEMENTACAO JWT*/
+	implementation 'com.auth0:java-jwt:4.5.0'
+
+	/*IMPLEMENTACAO DO JAKARTA*/
+	implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+
+	/*IMPLEMENTACAO FYWAYDB*/
+	implementation 'org.flywaydb:flyway-core'
+
+	/*IMPLEMENTES WEB */
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	/*SWAGGER */
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0'
+
+	/*IMPLEMENTES PARA VALIDAÇÃO DA CONTROLER */
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
