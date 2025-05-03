@@ -26,6 +26,12 @@ Após o login você recebe um token que precisa colocar na autenticação do swa
 para poder utilizar os serviço
 Segue imagem abaixo:
 
+
+A aplicação já cria um usuário admin dentro da migrations
+login admin, senha admin123
+
+Existe a possíbilidade de criar com menor previlegios (user) pela aplicação.
+
 ![swagger-servico.png](swagger-servico.png)
 
 
