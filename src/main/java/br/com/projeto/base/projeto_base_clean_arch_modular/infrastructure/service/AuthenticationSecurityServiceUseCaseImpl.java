@@ -1,7 +1,7 @@
 package br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.service;
 
 
-import br.com.projeto.base.projeto_base_clean_arch_modular.application.gateway.AuthenticationSecurityGateway;
+import br.com.projeto.base.projeto_base_clean_arch_modular.application.usecase.AuthenticationSecurityUseCase;
 import br.com.projeto.base.projeto_base_clean_arch_modular.domain.exception.BusinessValidateException;
 import br.com.projeto.base.projeto_base_clean_arch_modular.domain.exception.enums.ErroCodeEnum;
 import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.entity.UsuarioEntity;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class AuthenticationSecurityServiceImpl implements AuthenticationSecurityGateway {
+public class AuthenticationSecurityServiceUseCaseImpl implements AuthenticationSecurityUseCase {
 
     private final AuthenticationManager authenticationManager;
     private final UsuarioEntityRepository usuarioEntityRepository;

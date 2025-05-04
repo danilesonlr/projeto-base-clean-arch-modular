@@ -1,10 +1,10 @@
 package br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.config.security;
 
 
-import br.com.projeto.base.projeto_base_clean_arch_modular.application.gateway.AuthenticationSecurityGateway;
+import br.com.projeto.base.projeto_base_clean_arch_modular.application.usecase.AuthenticationSecurityUseCase;
 import br.com.projeto.base.projeto_base_clean_arch_modular.application.gateway.TokenGateway;
 import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.repository.UsuarioEntityRepository;
-import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.service.AuthenticationSecurityServiceImpl;
+import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.service.AuthenticationSecurityServiceUseCaseImpl;
 import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.service.TokenServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -73,10 +73,10 @@ public class SecurityConfig {
     }
 
     @Bean
-    public AuthenticationSecurityGateway authentication(AuthenticationManager authenticationManager,
+    public AuthenticationSecurityUseCase authentication(AuthenticationManager authenticationManager,
                                                         UsuarioEntityRepository usuarioEntityRepository,
                                                         TokenServiceImpl tokenGateway) {
-        return new AuthenticationSecurityServiceImpl(authenticationManager, usuarioEntityRepository, tokenGateway);
+        return new AuthenticationSecurityServiceUseCaseImpl(authenticationManager, usuarioEntityRepository, tokenGateway);
     }
 
     @Bean

@@ -1,7 +1,7 @@
 package br.com.projeto.base.projeto_base_clean_arch_modular.interfaces.controller;
 
 
-import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.service.AuthenticationSecurityServiceImpl;
+import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.service.AuthenticationSecurityServiceUseCaseImpl;
 import br.com.projeto.base.projeto_base_clean_arch_modular.interfaces.dto.AuthenticationDTO;
 import br.com.projeto.base.projeto_base_clean_arch_modular.interfaces.dto.RegisterDTO;
 import br.com.projeto.base.projeto_base_clean_arch_modular.interfaces.dto.ResponseAuthenticationToken;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class AuthenticationController {
 
-    private final AuthenticationSecurityServiceImpl authenticationSecurityService;
+    private final AuthenticationSecurityServiceUseCaseImpl authenticationSecurityService;
 
 
     @PostMapping("/login")
