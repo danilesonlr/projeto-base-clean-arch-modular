@@ -1,6 +1,6 @@
 package br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.entity.converter;
 
-import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.entity.enums.AcessoRoleEnum;
+import br.com.projeto.base.projeto_base_clean_arch_modular.domain.entities.enums.AcessoRoleEnum;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

@@ -1,4 +1,4 @@
-package br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.entity.enums;
+package br.com.projeto.base.projeto_base_clean_arch_modular.domain.entities.enums;
 
 public enum AcessoRoleEnum {
     ADMIN("admin"),

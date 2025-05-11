@@ -17,6 +17,13 @@ Tecnologias utilizadas.
 * Swagger
 * Banco h2
 
+Para connectar no console do h2 deve acessar o link 
+colocar a URL: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+
+no campo JDBC URL: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+
+![img.png](img.png)
+
 Para executar a aplicação e preciso startar a classe Application.java dentro do modulo interface.
 Após subir o sistema.
 

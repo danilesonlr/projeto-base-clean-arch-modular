@@ -1,7 +1,7 @@
 package br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.entity;
 
 import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.entity.converter.AcessoConverter;
-import br.com.projeto.base.projeto_base_clean_arch_modular.infrastructure.entity.enums.AcessoRoleEnum;
+import br.com.projeto.base.projeto_base_clean_arch_modular.domain.entities.enums.AcessoRoleEnum;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

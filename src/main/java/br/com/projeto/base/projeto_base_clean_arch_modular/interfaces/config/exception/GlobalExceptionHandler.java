@@ -28,7 +28,8 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(BusinessValidateException.class)
-    protected ResponseEntity<Object> handleBusinessValidateException(BusinessValidateException ex,  WebRequest request) {
+    protected ResponseEntity<Object> handleBusinessValidateException(BusinessValidateException ex,
+                                                                     WebRequest request) {
         log.error(ex.getMessage(), ex);
         ApiErro apiErro = new ApiErro(ex.getCode(), ex.getMessage(), HttpStatus.BAD_REQUEST.value());
         return this.handleExceptionInternal(ex, apiErro, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
@@ -36,7 +37,10 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
 
     @Override
-    protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+    protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+                                                                  HttpHeaders headers,
+                                                                  HttpStatusCode status,
+                                                                  WebRequest request) {
         Map<String, String> fieldErrors = new HashMap<>();
 
         log.error("Erro de validação: {}", fieldErrors);
