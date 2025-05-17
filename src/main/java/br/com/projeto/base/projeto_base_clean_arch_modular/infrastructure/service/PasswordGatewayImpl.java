@@ -21,6 +21,19 @@ public class PasswordGatewayImpl implements PasswordGateway {
         var usernamePassword = new UsernamePasswordAuthenticationToken(login, senha);
         var auth = authenticationManager.authenticate(usernamePassword);
         UsuarioEntity user = (UsuarioEntity) auth.getPrincipal();
+
+        String teste = """
+               <html lang="pt-br">
+               <head>
+                    
+               </head>
+               <body>
+
+               </body>
+               </html>
+                    
+
+""";
         return usuarioMapper.entityToUsuario(user);
     }
 
